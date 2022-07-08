@@ -1,4 +1,4 @@
-# https://github.com/gdev8584/gdev8584.github.io/edit/Portfolio/
+# https://github.com/gdev8584/gdev8584.github.io/tree/Portfolio
 A portfolio webpage
 ## Objective: 
  
