@@ -41,14 +41,15 @@ input {
     border-radius: 5px;
     outline: none;
 }
-input[type="button"]{
-    width: 310px;
+input[type="submit"]{
+    width: 320px;
     margin-top: 20px;
     height: 38px;
     background-color: rgb(38, 220, 38);
     font-size: 18px;
     color: white;
     cursor: pointer;
+    border: none;
 }
 p {
     text-align: center;
@@ -78,7 +79,7 @@ p {
         margin: auto;
         border-radius: 10px;
     }
-    input, input[type="button"] {
+    input, input[type="submit"] {
       width: 70%;
       margin-top: 2px;
     }
