@@ -1,0 +1,39 @@
+body {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    animation: bg-color 5s infinite;
+}
+.bird {
+    position: relative;
+    width: 30%;
+    left: 100%;
+    animation: fly 5s infinite;
+}
+@keyframes bg-color{
+    0% {background-color: blueviolet;}
+    25% {background-color: skyblue;}
+    50% {background-color: rgb(55, 145, 170);}
+    75% {background-color: rgb(14, 197, 136);}
+    100% {background-color: rgb(115, 232, 25);}
+}
+@keyframes fly {
+    0%{
+        right:-100%;
+        top: 450px;
+    }
+    25%{
+        top: 150px;
+    }
+    50%{
+        top: 80px;
+    }
+    75%{
+        top: 30px;
+    }
+    100%{
+        left: -30%;
+        top: 5px;
+    }
+}
