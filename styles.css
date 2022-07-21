@@ -20,37 +20,34 @@ body {
     background-position: center;
     background-size: cover;
     position: relative;
-    z-index: 1;
+    display: grid;
+    grid-template-rows: 100px auto 10px;
 }
 .logo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+     grid-row: 1/2;
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+}
+.netfix{
+    grid-column: 1/7;
 }
 .btn {
-    width: 120px;
+    grid-column: 8/9;
+    width: 100px;
     height: 35px;
     margin-top: 30px;
     margin-right: 46px;
     background-color: rgba(234, 28, 28, 0.932);
     border-radius: 4px;
     text-align: center;
-    padding: 5px 10px;
+    padding: 5px 1px;
     cursor: pointer;
 }
-.btn a {
-    text-decoration: none;
+.btn a{
     color: white;
-    font-size: 15px;
+    font-size: 80%;
 }
-.btn1 ul li {
-    display: inline-block;
-}
-.glb {
-    border: 0.8px solid white;
-    padding: 4px;
-    margin-right: 5px;
-}
+
 /* .btn1 {
     /* position: absolute;
     left: 80%; */
@@ -66,19 +63,29 @@ body {
     /* cursor: pointer; */
 /*} */
 .btn1 {
+    grid-column: 7/8;
+    width: 100px;
+    height: 35px;
     text-decoration: none;
     color: white;
+    margin: 30px;
+    border: 1px solid white;
     /* font-size: 16px; */
 }
 .btn1 i {
-    font-size: 12px;
+    font-size: 14px;
+    padding-left: 4px;
 }
-#English {
+.btn1 option {
+    background-color: black;
+}
+.btn1 #English {
     background-color: transparent;
-    font-size: 15px;
+    font-size: 90%;
     color: white;
     outline: none;
     border: none;
+    padding-top: 5px;
 }
 .logo img {
     margin-top: 25px;
@@ -99,7 +106,7 @@ body {
     font-size: 60px;
     font-weight: 600;
     text-align: center;
-    line-height: 42pt;
+    line-height: 49pt;
     text-shadow: 0 5px 0 black;
 }
 .para .p1 {
@@ -460,7 +467,9 @@ hr {
                 position: absolute;
                 height: auto;
                 width: 70%;
-                margin-left: 8%;
+                left: 50%;
+                right: 50%;
+                transform: translate(-50%, 10%);
                     /* transform: translateX(30%); */
                 /* z-index: ; */
                 }
@@ -468,8 +477,9 @@ hr {
                 position: absolute;
                 height: auto;
                 width: 42%;
-                margin-top: 39%;
-                margin-left: 22%;
+                left: 50%;
+                right: 50%;
+                transform: translate(-80%,50%);
                 display: flex;
                 border: 2px solid rgb(109, 103, 103);
                 border-radius: 12px;
@@ -678,7 +688,9 @@ hr {
         position: absolute;
         height: auto;
         width: 70%;
-        margin-left: 15%;
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%,1%);
             /* transform: translateX(30%); */
         /* z-index: ; */
         }
@@ -860,26 +872,27 @@ hr {
     .footer {
         /* background-color: aqua; */
         height: 50vh;
-        width: 100%;
-        display: grid;
-        grid-template-rows: 40px 1fr 40px;
-        position: absolute;
+        width: 75%;
+        /* display: grid;
+        grid-template-rows: 40px 1fr 40px; */
     }
     .ques {
         width:50%;
         margin-left: 20%;
         margin-top: 5%;
-        grid-row: 1/2;
+        /* grid-row: 1/2; */
         color: rgb(109, 105, 105);
     }
     .list {
-        width: 60%;
-        margin-top: 5%;
+        width: 70%;
+        margin-top: 2%;
         margin-left: 20%;
-        /* background-color: aqua; */
-        grid-row: 2/3;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        /* grid-row: 2/3;
         display: grid;
-        grid-template-columns:repeat(4,1fr) ;
+        grid-template-columns:repeat(4,1fr) ; */
     }
     .list ul li a{
         color: rgb(109, 105, 105);
@@ -889,10 +902,10 @@ hr {
         margin-bottom: 3%;
     }
     .btn2 {
-        grid-row: 3/4;
+        /* grid-row: 3/4; */
         width: 125px;
         height: 45px;
-        margin-top: -4%;
+        margin-top: 2%;
         margin-left: 16%;
         background-color: transparent;
         border: 1px solid rgb(108, 106, 106);
@@ -904,13 +917,19 @@ hr {
         text-decoration: none;
         font-size: 16px;
     }
+    .btn2 p {
+        margin-top: 25px;
+        text-align: left;
+        color: rgb(90, 86, 86);
+        font-size: 13px;
+    }
     .btn2 i {
-        font-size: 12px;
-        color: white;
+        font-size: 16px;
+        color: rgb(92, 84, 84);
     }
     select {
         background-color: transparent;
-        color: white;
+        color: rgb(120, 115, 115);
         border: none;
         font-size: 16px;
     }
@@ -924,16 +943,12 @@ hr {
     /* <!-- .................................................end page.............................................................. --> */
 
 /* <!-- .................................................Responsive first page.............................................................. --> */
-@media screen and (max-width: 948px) {
+@media screen and (max-width: 768px) {
     .logo img {
         margin-top: 27px;
         margin-left: 42px;
         width: 115px;
         height: 37px;
-    }
-    .logo {
-        display: flex;
-        justify-content: space-between;
     }
     .para {
         /* display: flex;
@@ -944,17 +959,8 @@ hr {
         margin-top: 145px;
         z-index: 3;
     }
-    .para1 {
-        /* display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center; */
-        color: white;
-        margin-top: 0;
-        z-index: 3;
-    }
     .para h1 {
-        font-size: 6vw;
+        font-size: 40px;
         font-weight: 600;
         text-align: center;
         line-height: 42pt;
@@ -1007,8 +1013,8 @@ hr {
         padding: 0 5px 0 5px;
     }
     .para a {
-        margin-top: 30px;
-        width: 154px;
+        margin-top: 15px;
+        width: 130px;
         text-decoration: none;
         height: 40px;
         background-color: rgba(216, 22, 22, 0.953);
@@ -1016,11 +1022,11 @@ hr {
         text-align: center;
         padding-top: 6px;
         border-radius: 3px;
-        font-size: medium;
+        font-size: 80%;
     }
     .para1 a {
         margin-top: 3px;
-        width: 154px;
+        width: 130px;
         text-decoration: none;
         height: 35px;
         background-color: rgba(216, 22, 22, 0.953);
@@ -1028,21 +1034,18 @@ hr {
         text-align: center;
         padding-top: 6px;
         border-radius: 3px;
-        font-size: 1.6vw;
+        font-size: 80%;
         margin-bottom: 5px;
     }
     .para .p1 {
-        font-size: 4vw;
-        margin-top: 17px;
-        text-align: center;
-        text-shadow: 0 1px 0 black;
+        font-size: 25px;
         }
     
     .para .p2 {
         text-align: center;
         margin-top: 20px;
-        font-size: 3vw ;
-        margin: 20px 110px 0 120px;
+        font-size: 18px;
+        margin: 20px 90px 0 90px;
         text-shadow: 0 1px 0 black;
     }
     .para1 .p2 {
@@ -1051,82 +1054,4 @@ hr {
         margin: 20px 110px 0 120px;
         text-shadow: 0 1px 0 black;
     }
-    .btn1 {
-        height: 35px;
-        background-color: transparent;
-        border-radius: 4px;
-        text-align: start;
-        padding: 5px  1px;
-        /* padding: 5px  16px; */
-        /* cursor: pointer; */
-    }
-    .btn1 {
-        text-decoration: none;
-        color: white;
-        /* font-size: 16px; */
-    }
-    .btn1 i {
-        font-size: 12px;
-    }
-    #English {
-        background-color: transparent;
-        color: white;
-        outline: none;
-        border: none;
-        font-size: 16px;
-    }
-    .btn {
-        width: 120px;
-        height: 35px;
-        margin-top: 30px;
-        margin-right: 46px;
-        background-color: rgba(234, 28, 28, 0.932);
-        border-radius: 4px;
-        text-align: center;
-        padding: 5px 10px;
-        cursor: pointer;
-    }
-    .btn a {
-        text-decoration: none;
-        color: white;
-        font-size: 15px;
-    }
-    .btn1 ul li {
-        display: inline-block;
-    }
-    .glb {
-        border: 0.8px solid white;
-        padding: 4px;
-        margin-right: 5px;
-    }
-    /* .btn1 {
-        /* position: absolute;
-        left: 80%; */
-        /* width: 105px;
-        height: 35px;
-        margin-top: 30px;
-        margin-right: 46px;
-        background-color: transparent;
-        border: 2px solid white;
-        border-radius: 4px;
-        text-align: center;
-        padding: 5px  1px; */
-        /* cursor: pointer; */
-    /*} */
-    .btn1 {
-        text-decoration: none;
-        color: white;
-        /* font-size: 16px; */
-    }
-    .btn1 i {
-        font-size: 12px;
-    }
-    #English {
-        background-color: transparent;
-        font-size: 15px;
-        color: white;
-        outline: none;
-        border: none;
-    }
-    
 }
